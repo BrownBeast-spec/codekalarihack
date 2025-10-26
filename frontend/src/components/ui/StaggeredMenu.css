@@ -296,6 +296,7 @@
   padding-right: 1.4em;
   -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
   text-stroke: 2px rgba(255, 255, 255, 0.8);
+  width: fit-content;
 }
 
 .staggered-menu-panel .sm-socials-list .sm-socials-link {
@@ -320,12 +321,38 @@
   display: inline-block;
   will-change: transform;
   transform-origin: 50% 100%;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
 }
 
+.sm-panel-itemLabel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 12px;
+  background: #e6612d;
+  transform: translateY(-50%);
+  transition: width 0.4s ease;
+  z-index: -1;
+  opacity: 0.95;
+}
+
+.sm-panel-item:hover .sm-panel-itemLabel::before {
+  width: 100%;
+}
+
+
 .sm-panel-item:hover {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--sm-accent, #f97316);
-  text-stroke: 2px var(--sm-accent, #f97316);
+  color: rgba(255, 255, 255, 1);
+  -webkit-text-stroke: 0px transparent;
+  text-stroke: 0px transparent;
+}
+
+.sm-panel-item:hover .sm-panel-itemLabel {
+  color: rgba(255, 255, 255, 1);
 }
 
 .sm-panel-list[data-numbering] {

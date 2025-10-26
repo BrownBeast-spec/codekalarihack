@@ -16,7 +16,7 @@ export default function Navbar() {
             HOME
           </Link>
            <Link 
-            href="/" 
+            href="/about" 
             className="text-foreground hover:text-foreground/80 transition-colors"
           >
             ABOUT
