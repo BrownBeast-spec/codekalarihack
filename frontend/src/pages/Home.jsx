@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const menuItems = [
   { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
+  { label: 'About Us', ariaLabel: 'Learn about us', link: '/about' },
   { label: 'Pricing', ariaLabel: 'View our pricing', link: '/pricing' }
 ];
 

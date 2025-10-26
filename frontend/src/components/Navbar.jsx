@@ -13,7 +13,13 @@ export default function Navbar() {
             href="/" 
             className="text-foreground hover:text-foreground/80 transition-colors"
           >
-            Home
+            HOME
+          </Link>
+           <Link 
+            href="/" 
+            className="text-foreground hover:text-foreground/80 transition-colors"
+          >
+            ABOUT
           </Link>
           <Link 
             href="/pricing" 

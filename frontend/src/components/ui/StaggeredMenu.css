@@ -109,6 +109,12 @@
   position: relative;
   overflow: hidden;
   line-height: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem 0;
+}
+
+.sm-panel-itemWrap:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .sm-icon-line {
@@ -269,12 +275,12 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0;
 }
 
 .sm-panel-item {
   position: relative;
-  color: #000;
+  color: transparent;
   font-weight: 600;
   font-size: 3.5rem;
   cursor: pointer;
@@ -283,10 +289,13 @@
   text-transform: uppercase;
   transition:
     background 0.25s,
-    color 0.25s;
+    color 0.25s,
+    -webkit-text-stroke 0.25s;
   display: inline-block;
   text-decoration: none;
   padding-right: 1.4em;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+  text-stroke: 2px rgba(255, 255, 255, 0.8);
 }
 
 .staggered-menu-panel .sm-socials-list .sm-socials-link {
@@ -314,7 +323,9 @@
 }
 
 .sm-panel-item:hover {
-  color: var(--sm-accent, #5227ff);
+  color: transparent;
+  -webkit-text-stroke: 2px var(--sm-accent, #f97316);
+  text-stroke: 2px var(--sm-accent, #f97316);
 }
 
 .sm-panel-list[data-numbering] {
