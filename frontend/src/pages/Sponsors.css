@@ -1,0 +1,250 @@
+/* Trusted by Companies Section */
+  .sponsors-section {
+    background-color: #000000; 
+    padding: 60px 0;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .sponsors-section .Platinumh2 {
+    color: #bbf8ff;
+    margin-top: 3%; 
+    font-size: 3rem;
+    padding: 10px 14px;
+    background: #6b6b6b;
+    border-radius: 14px;
+    font-weight: 700;
+    width: 25%;
+    margin-bottom: 10%;
+    margin-left: 2%;
+  }
+
+  .sponsors-section .Goldh2 {
+    color: #fff2a8; 
+    margin-top: 5%; 
+    font-size: 3rem;
+    font-weight: 700;
+    background: #a09d88;
+    width: 20%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    margin-bottom: 7%;
+    margin-left: 2%;
+  }
+
+  .sponsors-section .Silverh2 {
+    color: rgb(222, 222, 222); 
+    margin-top: 5%; 
+    font-size: 3rem;
+    background: #797979;
+    padding: 10px 14px;
+    border-radius: 14px;
+    width: 21%;
+    font-weight: 700;
+    margin-bottom: 7%;
+    margin-left: 2%;
+  }
+  
+  /* Scroll wrapper-toleft */
+  .wrapper-toleft {
+    width: 90%;
+    max-width: 2000px;
+    margin-inline: auto;
+    position: relative;
+    height: 500px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  /* Animation for scrolling */
+  @keyframes scrollLeft {
+    to {
+      left: -600px;
+    }
+  }
+  .wrapper-toright{
+    width: 90%;
+    max-width: 2000px;
+    margin-inline: auto;
+    position: relative;
+    height: 500px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  .wrapper-toleftsilver {
+    width: 90%;
+    max-width: 2000px;
+    margin-inline: auto;
+    position: relative;
+    height: 500px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  /* Animation for scrolling */
+  @keyframes scrollRight {
+    to {
+      right: -600px;
+    }
+  }
+  
+  .itemleft {
+    width: 400px;
+    height: 400px;
+    background-color: #b3f2ff; 
+    color: #000000; 
+    border-radius: 25px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: max(calc(500px * 10), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+  }
+
+  .itemright {
+  width: 400px;
+  height: 400px;
+  background-color: #ffed87; 
+    color: #000000; 
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  right: max(calc(500px * 10), 100%);
+  animation-name: scrollRight;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Stagger animation for items */
+
+  
+  .leftitem1 {
+    animation-delay: calc(30s / 10 * (10 - 1) * -1);
+  }
+  
+  .leftitem2 {
+    animation-delay: calc(30s / 10 * (10 - 2) * -1);
+  }
+  
+  .leftitem3 {
+    animation-delay: calc(30s / 10 * (10 - 3) * -1);
+  }
+  
+  .leftitem4 {
+    animation-delay: calc(30s / 10 * (10 - 4) * -1);
+  }
+  
+  .leftitem5 {
+    animation-delay: calc(30s / 10 * (10 - 5) * -1);
+  }
+  
+  .leftitem6 {
+    animation-delay: calc(30s / 10 * (10 - 6) * -1);
+  }
+  
+  .leftitem7 {
+    animation-delay: calc(30s / 10 * (10 - 7) * -1);
+  }
+  
+  .leftitem8 {
+    animation-delay: calc(30s / 10 * (10 - 8) * -1);
+  }
+  
+  .leftitem9 {
+    animation-delay: calc(30s / 10 * (10 - 9) * -1);
+  }
+  
+  .leftitem10 {
+    animation-delay: calc(30s / 10 * (10 - 10) * -1);
+  }
+
+  .rightitem1 {
+    animation-delay: calc(30s / 10 * (10 - 1) * -1);
+  }
+  
+  .rightitem2 {
+    animation-delay: calc(30s / 10 * (10 - 2) * -1);
+  }
+  
+  .rightitem3 {
+    animation-delay: calc(30s / 10 * (10 - 3) * -1);
+  }
+  
+  .rightitem4 {
+    animation-delay: calc(30s / 10 * (10 - 4) * -1);
+  }
+  
+  .rightitem5 {
+    animation-delay: calc(30s / 10 * (10 - 5) * -1);
+  }
+  
+  .rightitem6 {
+    animation-delay: calc(30s / 10 * (10 - 6) * -1);
+  }
+  
+  .rightitem7 {
+    animation-delay: calc(30s / 10 * (10 - 7) * -1);
+  }
+  
+  .rightitem8 {
+    animation-delay: calc(30s / 10 * (10 - 8) * -1);
+  }
+  
+  .rightitem9 {
+    animation-delay: calc(30s / 10 * (10 - 9) * -1);
+  }
+  
+  .rightitem10 {
+    animation-delay: calc(30s / 10 * (10 - 10) * -1);
+  }
+
+
+  
+  @media (max-width: 768px) {
+    .wrapper-toleft {
+      height: 80px;
+    }
+  
+    .wrapper-toright {
+      height: 80px;
+    }
+    .item {
+      width: 150px;
+      height: 80px;
+      font-size: 1rem;
+    }
+  }

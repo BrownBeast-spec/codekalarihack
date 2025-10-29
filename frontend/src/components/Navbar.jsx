@@ -1,33 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import "./Navbar.css";
+
+const menuItems = [
+  { label: "Home", link: "/" },
+  { label: "About Us", link: "/about" },
+  { label: "Sponsors", link: "/sponsors" },
+];
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        
-        
-        <div className="flex items-center gap-6">
-          <Link 
-            href="/" 
-            className="text-foreground hover:text-foreground/80 transition-colors"
-          >
-            HOME
-          </Link>
-           <Link 
-            href="/about" 
-            className="text-foreground hover:text-foreground/80 transition-colors"
-          >
-            ABOUT
-          </Link>
-          <Link 
-            href="/pricing" 
-            className="text-foreground hover:text-foreground/80 transition-colors"
-          >
-            Pricing
-          </Link>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="logo">
+          <Link href="/">Code Kalari</Link>
         </div>
+        <ul className="menu">
+          {menuItems.map((item) => (
+            <li key={item.label}>
+              <Link href={item.link}>{item.label}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );

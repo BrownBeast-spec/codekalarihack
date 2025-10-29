@@ -5,14 +5,39 @@ import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MorphingTextDemo from "@/components/MorphingTextDemo";
-import StaggeredMenu from "@/components/ui/StaggeredMenu";
+import CardNav from "@/components/ui/CardNav";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-const menuItems = [
-  { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
-  { label: 'About Us', ariaLabel: 'Learn about us', link: '/about' },
-  { label: 'Pricing', ariaLabel: 'View our pricing', link: '/pricing' }
+const navItems = [
+  {
+    label: "Explore",
+    bgColor: "#1a1a1a",
+    textColor: "#fff",
+    links: [
+      { label: "About", href: "/about", ariaLabel: "Learn about Code Kalari" },
+      { label: "Events", href: "/events", ariaLabel: "View our events" },
+      { label: "Projects", href: "/projects", ariaLabel: "See our projects" }
+    ]
+  },
+  {
+    label: "Community",
+    bgColor: "#2a2a2a",
+    textColor: "#fff",
+    links: [
+      { label: "Join Us", href: "/join", ariaLabel: "Join the community" },
+      { label: "Teams", href: "/teams", ariaLabel: "Meet our teams" }
+    ]
+  },
+  {
+    label: "Resources",
+    bgColor: "#3a3a3a",
+    textColor: "#fff",
+    links: [
+      { label: "Blog", href: "/blog", ariaLabel: "Read our blog" },
+      { label: "Docs", href: "/docs", ariaLabel: "View documentation" }
+    ]
+  }
 ];
 
 export default function Home() {
@@ -53,19 +78,18 @@ export default function Home() {
         </video>
       </div>
 
-      {/* Fixed Menu */}
-      <StaggeredMenu
-        position="right"
-        items={menuItems}
-        displaySocials={false}
-        displayItemNumbering={true}
-        menuButtonColor="#fff"
-        openMenuButtonColor="#fff"
-        changeMenuColorOnOpen={false}
-        colors={['#f97316', '#ea580c']}
-        accentColor="#f97316"
-        isFixed={true}
-      />
+      {/* Fixed Navbar */}
+      <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000 }}>
+        <CardNav 
+          logo="/logo.png"
+          logoAlt="Code Kalari"
+          items={navItems}
+          baseColor="transparent"
+          menuColor="#ffffff"
+          buttonBgColor="rgba(255, 255, 255, 0.2)"
+          buttonTextColor="#ffffff"
+        />
+      </div>
 
       {/* Smooth Scroll Wrapper */}
       <div id="smooth-wrapper" ref={smoothWrapperRef}>
