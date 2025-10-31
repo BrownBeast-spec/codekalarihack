@@ -2,7 +2,10 @@
 
 import CardNav from "../components/ui/CardNav";
 import SplineIframe from "../components/SplineModel"; // your Spline iframe component
+import About from "../pages/About";
 import Sponsors from "../pages/Sponsors";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 
 const navItems = [
   {
@@ -40,7 +43,7 @@ export default function Home() {
     <div>
       <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000 }}>
         <CardNav 
-          logo="/logo.png"
+          logo="/globe.svg"
           logoAlt="Code Kalari"
           items={navItems}
           baseColor="transparent"
@@ -50,7 +53,10 @@ export default function Home() {
         />
       </div>
       <SplineIframe /> {/* The 3D scene */}
+      <About /> {/* About section */}
       <Sponsors /> {/* Sponsors section */}
+      <FAQ /> {/* FAQ section */}
+      <Footer /> {/* Footer */}
     </div>
   );
 }

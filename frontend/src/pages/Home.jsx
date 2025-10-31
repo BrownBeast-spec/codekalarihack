@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MorphingTextDemo from "@/components/MorphingTextDemo";
+import MorphingTextDemo from "../components/MorphingTextDemo";
 import CardNav from "@/components/ui/CardNav";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -81,7 +81,7 @@ export default function Home() {
       {/* Fixed Navbar */}
       <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 1000 }}>
         <CardNav 
-          logo="/logo.png"
+          logo="/globe.svg"
           logoAlt="Code Kalari"
           items={navItems}
           baseColor="transparent"

@@ -3,7 +3,19 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 // use your own icon import if react-icons is not available
-import { GoArrowUpRight } from 'react-icons/go';
+const ArrowUpRight = ({ size = 16, color = 'currentColor' }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path d="M7 17L17 7" stroke={color} strokeWidth="2" strokeLinecap="round" />
+    <path d="M9 7H17V15" stroke={color} strokeWidth="2" strokeLinecap="round" />
+  </svg>
+);
 import './CardNav.css';
 
 const CardNav = ({
@@ -159,9 +171,13 @@ const CardNav = ({
             <div className="hamburger-line" />
           </div>
 
-          <div className="logo-container">
+        <div className="logo-container">
+          {logo ? (
+            <img src={logo} alt={logoAlt} className="logo" />
+          ) : (
             <span className="logo-text">{logoAlt}</span>
-          </div>
+          )}
+        </div>
         </div>
 
         <div className="card-nav-content" aria-hidden={!isExpanded}>
@@ -176,7 +192,7 @@ const CardNav = ({
               <div className="nav-card-links">
                 {item.links?.map((lnk, i) => (
                   <a key={`${lnk.label}-${i}`} className="nav-card-link" href={lnk.href} aria-label={lnk.ariaLabel}>
-                    <GoArrowUpRight className="nav-card-link-icon" aria-hidden="true" />
+                    <ArrowUpRight />
                     {lnk.label}
                   </a>
                 ))}
